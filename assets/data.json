@@ -1,0 +1,48 @@
+[
+  {
+    "title": "2017 Acura TLX",
+    "type": "car",
+    "firstVisit": true,
+    "licensePlate": "abc1234",
+    "imgUrl": "./assets/images/acuratlx.jpg"
+  },
+  {
+    "title": "2017 Nissan GT-R",
+    "type": "car",
+    "firstVisit": false,
+    "licensePlate": "bbb4563",
+    "imgUrl": "./assets/images/nissangtr.jpg"
+  },
+  {
+    "title": "2011 Dodge Ram",
+    "type": "truck",
+    "firstVisit": true,
+    "licensePlate": "def3456",
+    "bedOpen": true,
+    "bedCleaning": false,
+    "imgUrl": "./assets/images/dodgeram.jpg"
+  },
+  {
+    "title": "2017 Audi R8",
+    "type": "car",
+    "firstVisit": true,
+    "licensePlate": "1111111",
+    "imgUrl": "./assets/images/audir8.png"
+  },
+  {
+    "title": "2017 Ford Raptor",
+    "type": "truck",
+    "firstVisit": true,
+    "licensePlate": "xyz0987",
+    "bedOpen": false,
+    "bedCleaning": true,
+    "imgUrl": "./assets/images/fordraptor.jpg"
+  },
+  {
+    "title": "2009 Yamaha YZF-R1",
+    "type": "motorcycle",
+    "firstVisit": true,
+    "licensePlate": "jfk495h",
+    "imgUrl": "./assets/images/yamahar1.jpg"
+  }
+]
