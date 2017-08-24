@@ -2,6 +2,7 @@ import { CarwashComponent } from './carwash/carwash.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { AppComponent } from './app.component';
+import { LandingComponent } from './landing/landing.component';
 
 const routes: Routes = [
   {
@@ -11,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'main',
-    component: AppComponent
+    component: LandingComponent
   },
   {
     path: 'carwash',

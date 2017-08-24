@@ -1,17 +1,27 @@
-<div class="row">
+<section class="row">
+  <div class="col-sm-12">
+    <h4>Please choose the vehicle to send through the wash. Check the status below.</h4>  
+  </div>
+</section>
+<section class="row">
   <ul>
     <li class="col-sm-4" *ngFor="let vehicle of vehicles | async">
       <app-vehicle (dispatch)="getStatus(vehicle)" [vehicle]="vehicle"></app-vehicle>
     </li>
   </ul>
-</div>
-<div class="row">
-  <p *ngIf="status.discount">You have been given 50% off today! Thank you for your loyalty!</p>
-  <p [ngClass]="{'rejected': status.completed === 'rejected'}">
-    {{status.message}}
-  </p>
-  
-</div>
+</section>
+<section class="row">
+  <div class="col-sm-12">
+    <div class="status-container center card">
+    <h5>Status</h5>
+      <p *ngIf="status.discount" class="discount">You have been given 50% off today! Thank you for your loyalty!</p>
+      <p *ngIf="status.price && status.price !== 0">Your cost is: {{status.price | currency:'USD':true }}</p>
+      <p [ngClass]="{'rejected': status.completed === 'rejected'}">
+        {{status.message}}
+      </p>
+    </div>
+  </div>
+</section>
 
 
 

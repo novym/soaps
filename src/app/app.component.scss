@@ -1,0 +1,61 @@
+header {
+  height: 70px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #2c3e50;
+}
+
+.logo {
+  h1 {
+    color: #2880B9;
+    display: inline-block;
+    font-size: 48px;
+    margin: 0;
+
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  img {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+nav {
+  ul {
+    margin: 0;
+    text-align: right;
+  }
+
+  li {
+    display: inline-block;
+
+    a {
+      color: #2c3e50;
+      display: inline-block;
+      height: 50px;
+      padding: 20px;
+      position: relative;
+      text-decoration: none;
+      vertical-align: middle;
+
+      &:hover,
+      &.active {
+        &:after {
+          content: '';
+          border-bottom: 3px solid #3498db;
+          bottom: -10px;
+          left: 0;
+          position: absolute;
+          width: 100%;
+        }
+
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 50px;
+}

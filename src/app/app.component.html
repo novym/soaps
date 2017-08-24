@@ -1,14 +1,22 @@
 <header>
-  <ul>
-    <li>
-      <a [routerLink]="['/main']">HOME</a>
-    </li>
-  </ul>
+  <div class="col-sm-5 col-xs-2 logo">
+    <img src="./assets/images/carwash-50.png"/>
+    <h1>SOAPS</h1>
+  </div>
+  <nav class="col-sm-7 col-xs-10">
+    <ul>
+      <li>
+        <a [routerLink]="['/main']" routerLinkActive="active">HOME</a>
+      </li>
+      <li>
+        <a [routerLink]="['/carwash']" routerLinkActive="active">CAR WASH</a>
+      </li>
+    </ul>
+  </nav>
 </header>
 <main class="container-fluid">
   <router-outlet></router-outlet>
 </main>
 <footer>
-  <a href="https://icons8.com/icon/12684/Car-Filled">icon credits</a>
+    <a href="https://icons8.com">Icon pack by Icons8</a>
 </footer>
-

@@ -1,10 +1,26 @@
 <div (click)="select(vehicle)" class="vehicle-card">
-  <p>{{vehicle.title}}</p>
-  <p>{{vehicle.type}}</p>
-  <p>{{vehicle.firstVisit}}</p>
-  <p>{{vehicle.licensePlate}}</p>
-  <p>{{vehicle.bedOpen}}</p>
-  <p>{{vehicle.bedCleaning}}</p>
-  <img src="{{vehicle.imgUrl}}"/>
+  <h5>{{vehicle.title}}</h5>
+  <img src="{{vehicle.imgUrl}}" />
+  <table>
+    <tr>
+      <td>Type:</td>
+      <td>{{vehicle.type}}</td>
+    </tr>
+    <tr>
+      <td>First Visit:</td>
+      <td>{{vehicle.firstVisit}}</td>
+    </tr>
+    <tr>
+      <td>Plate #</td>
+      <td>{{vehicle.licensePlate}}</td>
+    </tr>
+    <tr *ngIf="vehicle.type === 'truck'">
+      <td>Open Bed:</td>
+      <td>{{vehicle.bedOpen}}</td>
+    </tr>
+    <tr *ngIf="vehicle.type === 'truck'">
+      <td>Bed Cleaning:</td>
+      <td>{{vehicle.bedCleaning}}</td>
+    </tr>
+  </table>
 </div>
-

@@ -3,6 +3,7 @@ import { VehicleLoader } from '../vehicle-loader.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { IVehicle } from '../vehicle/vehicle';
 import { WashVehicleService } from '../wash-vehicle.service';
+import { CurrencyPipe } from '@angular/common';
 
 
 
@@ -22,13 +23,13 @@ export class CarwashComponent implements OnInit {
 
   constructor(
     private vehicleLoader: VehicleLoader,
-    private washVehicle: WashVehicleService 
+    private washVehicle: WashVehicleService
   ) { }
 
   ngOnInit() {
     this.vehicles = this.vehicleLoader.load();
     this.status = {};
-    this.status.message = 'Waiting for Vehicle...';
+    this.status.message = 'Robots are ready! Waiting for vehicle...';
   }
 
   getStatus(selected) {

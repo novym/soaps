@@ -21,7 +21,7 @@ export class WashVehicleService {
     function checkPlate(vehicle) {
       if (vehicle.licensePlate === '1111111') {
         status.completed = 'rejected'
-        status.message = 'Vehicle is reported as stolen.';
+        status.message = 'We are unable to wash vehicles that are reported as stolen.';
       } else {
         status.completed = 'complete';
         status.message = 'Vehicle is ready!';
