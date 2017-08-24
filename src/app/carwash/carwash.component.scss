@@ -15,18 +15,23 @@ ul {
 li {
   margin: 0 0 15px;
 }
+
+.status-container {
+  min-height: 115px;
+
+  h5 {
+    margin-top: 0;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
 .rejected {
   color: #e74c3c;
 }
 
 .discount {
   color: #27ae60;
-}
-
-.status-container {
-  min-height: 90px;
-
-  h5 {
-    margin-top: 0;
-  }
 }

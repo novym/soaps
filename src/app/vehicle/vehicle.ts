@@ -2,7 +2,8 @@ export interface IVehicle {
   title: string;
   type: string;
   firstVisit: boolean;
-  licenseplate: string;
+  licensePlate: string;
   bedOpen?: boolean;
   bedCleaning?: boolean;
+  imgUrl: string;
 }

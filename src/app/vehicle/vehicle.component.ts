@@ -8,10 +8,13 @@ import { IVehicle } from './vehicle';
 })
 export class VehicleComponent {
 
-  @Input('vehicle') vehicle: string;
+  @Input('vehicle') vehicle: IVehicle;
   @Output() dispatch: EventEmitter<IVehicle> = new EventEmitter();
 
-  select(vehicle: IVehicle) {
+  select(vehicle) {
     this.dispatch.emit(vehicle);
+    const status = document.getElementById('status')
+    status.scrollIntoView();
+    
   }
 }

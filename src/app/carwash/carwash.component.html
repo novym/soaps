@@ -11,14 +11,13 @@
   </ul>
 </section>
 <section class="row">
-  <div class="col-sm-12">
+  <div id="status" class="col-sm-12">
     <div class="status-container center card">
-    <h5>Status</h5>
+    <h5>
+      Status: <span [ngClass]="{'rejected': status.completed === 'rejected'}">{{status.message}}</span>
+    </h5>
       <p *ngIf="status.discount" class="discount">You have been given 50% off today! Thank you for your loyalty!</p>
       <p *ngIf="status.price && status.price !== 0">Your cost is: {{status.price | currency:'USD':true }}</p>
-      <p [ngClass]="{'rejected': status.completed === 'rejected'}">
-        {{status.message}}
-      </p>
     </div>
   </div>
 </section>
