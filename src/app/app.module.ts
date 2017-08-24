@@ -1,16 +1,23 @@
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { AppRouter } from './app.routes';
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { CarwashComponent } from './carwash/carwash.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VehicleComponent,
+    CarwashComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRouter,
+    HttpModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

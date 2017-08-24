@@ -1,0 +1,17 @@
+<div class="row">
+  <ul>
+    <li class="col-sm-4" *ngFor="let vehicle of vehicles | async">
+      <app-vehicle (dispatch)="getStatus(vehicle)" [vehicle]="vehicle"></app-vehicle>
+    </li>
+  </ul>
+</div>
+<div class="row">
+  <p *ngIf="status.discount">You have been given 50% off today! Thank you for your loyalty!</p>
+  <p [ngClass]="{'rejected': status.completed === 'rejected'}">
+    {{status.message}}
+  </p>
+  
+</div>
+
+
+

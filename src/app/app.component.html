@@ -1,6 +1,14 @@
+<header>
+  <ul>
+    <li>
+      <a [routerLink]="['/main']">HOME</a>
+    </li>
+  </ul>
+</header>
 <main class="container-fluid">
-  <div class="col-sm-4">One</div>
-  <div class="col-sm-4">Two</div>
-  <div class="col-sm-4">Three</div>
+  <router-outlet></router-outlet>
 </main>
+<footer>
+  <a href="https://icons8.com/icon/12684/Car-Filled">icon credits</a>
+</footer>
 
