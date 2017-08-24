@@ -13,14 +13,14 @@ export class WashVehicleService {
       message: '',
       discount: false
     };
- 
+
     checkPlate(vehicle);
     checkType(vehicle);
     checkDiscount(vehicle);
-    
-    function checkPlate(vehicle) {
-      if (vehicle.licensePlate === '1111111') {
-        status.completed = 'rejected'
+
+    function checkPlate(v) {
+      if (v.licensePlate === '1111111') {
+        status.completed = 'rejected';
         status.message = 'We are unable to wash vehicles that are reported as stolen.';
       } else {
         status.completed = 'complete';
@@ -28,41 +28,41 @@ export class WashVehicleService {
       }
     }
 
-    function checkType(vehicle) {
+    function checkType(v) {
       if (status.completed === 'rejected') {
         return;
-      } else if (vehicle.type === 'car') {
+      } else if (v.type === 'car') {
          status.price = 5;
-         return; 
-      } else if (vehicle.type === 'truck') {
-        washTruck(vehicle);
+         return;
+      } else if (v.type === 'truck') {
+        washTruck(v);
       } else {
         status.completed = 'rejected';
-        status.message = 'Unfortunately we are only able to accept cars and trucks at this time.'
+        status.message = 'Unfortunately we are only able to accept cars and trucks at this time.';
       }
     }
 
     function washTruck(truck) {
       if (truck.bedOpen) {
         status.completed = 'rejected';
-        status.message = 'We are unable to wash open truck beds.'
+        status.message = 'We are unable to wash open truck beds.';
         return;
       }
-      
-      status.price = 10
+
+      status.price = 10;
 
       if (truck.bedCleaning) {
-        status.price = status.price + 2;
+        status.price += 2;
       }
     }
 
-    function checkDiscount(vehicle) {
-      if (!vehicle.firstVisit) {
-        status.price = status.price * .5;
+    function checkDiscount(v) {
+      if (!v.firstVisit) {
+        status.price *= .5;
         status.discount = true;
       }
     }
-    console.log(status);
+
     return status;
   }
 }
